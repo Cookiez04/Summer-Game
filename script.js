@@ -600,11 +600,12 @@ function initBattlePassButtons() {
     const purchaseBtn = document.querySelector('.battlepass-purchase');
     const learnBtn = document.querySelector('.battlepass-learn');
     
-    if (purchaseBtn) {
-        purchaseBtn.addEventListener('click', () => {
-            showPurchaseDialog();
-        });
-    }
+    // Purchase button is now a direct PayPal link, no JavaScript needed
+    // if (purchaseBtn) {
+    //     purchaseBtn.addEventListener('click', () => {
+    //         showPurchaseDialog();
+    //     });
+    // }
     
     if (learnBtn) {
         learnBtn.addEventListener('click', () => {
