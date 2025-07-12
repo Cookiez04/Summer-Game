@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer (@SummerLoopGame) / X</title>
+    <link rel="icon" type="image/png" href="assets/pics/favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #000;
+            color: #e7e9ea;
+            line-height: 1.3;
+        }
+        
+        .header {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #2f3336;
+            padding: 0 16px;
+            height: 53px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .x-logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: #e7e9ea;
+        }
+        
+        .profile-section {
+            padding: 20px 16px;
+            border-bottom: 1px solid #2f3336;
+        }
+        
+        .profile-banner {
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 16px;
+            margin-bottom: -40px;
+            position: relative;
+        }
+        
+        .profile-info {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        
+        .profile-pic {
+            width: 134px;
+            height: 134px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            border: 4px solid #000;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-actions {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .follow-btn {
+            background: #1d9bf0;
+            color: #fff;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        .more-btn {
+            background: none;
+            border: 1px solid #536471;
+            color: #e7e9ea;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-details h2 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        
+        .handle {
+            color: #71767b;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+        
+        .bio {
+            margin: 12px 0;
+            font-size: 15px;
+            line-height: 1.3125;
+        }
+        
+        .profile-metadata {
+            display: flex;
+            gap: 20px;
+            color: #71767b;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+        
+        .metadata-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+        
+        .stat {
+            color: #71767b;
+        }
+        
+        .stat strong {
+            color: #e7e9ea;
+            font-weight: 700;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            border-bottom: 1px solid #2f3336;
+        }
+        
+        .nav-tab {
+            flex: 1;
+            padding: 16px;
+            text-align: center;
+            color: #71767b;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 15px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-tab.active {
+            color: #e7e9ea;
+            border-bottom-color: #1d9bf0;
+        }
+        
+        .timeline {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .tweet {
+            padding: 12px 16px;
+            border-bottom: 1px solid #2f3336;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        
+        .tweet:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .tweet-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 2px;
+        }
+        
+        .tweet-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        
+        .tweet-meta {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .tweet-name {
+            font-weight: 700;
+            font-size: 15px;
+            color: #e7e9ea;
+        }
+        
+        .tweet-handle {
+            color: #71767b;
+            font-size: 15px;
+        }
+        
+        .tweet-time {
+            color: #71767b;
+            font-size: 15px;
+        }
+        
+        .tweet-content {
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.3125;
+            margin-left: 52px;
+        }
+        
+        .tweet-media {
+            margin-left: 52px;
+            margin-bottom: 12px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #2f3336;
+        }
+        
+        .tweet-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .tweet-actions {
+            display: flex;
+            justify-content: space-between;
+            max-width: 425px;
+            margin-left: 52px;
+            color: #71767b;
+            font-size: 13px;
+        }
+        
+        .action {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
+        
+        .action:hover {
+            background: rgba(29, 155, 240, 0.1);
+            color: #1d9bf0;
+        }
+        
+        .action.retweet:hover {
+            background: rgba(0, 186, 124, 0.1);
+            color: #00ba7c;
+        }
+        
+        .action.like:hover {
+            background: rgba(249, 24, 128, 0.1);
+            color: #f91880;
+        }
+        
+        .back-link {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #1d9bf0;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 101;
+        }
+        
+        .trending-tag {
+            color: #1d9bf0;
+            text-decoration: none;
+        }
+        
+        .trending-tag:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Summer</a>
+    
+    <div class="header">
+        <div class="x-logo">𝕏</div>
+    </div>
+    
+    <div class="profile-section">
+        <div class="profile-banner"></div>
+        <div class="profile-info">
+            <div class="profile-pic">🌀</div>
+            <div class="profile-actions">
+                <button class="more-btn">⋯</button>
+                <button class="follow-btn">Follow</button>
+            </div>
+        </div>
+        <div class="profile-details">
+            <h2>Summer</h2>
+            <div class="handle">@SummerLoopGame</div>
+        </div>
+        <div class="bio">
+            The Loop Never Ends • Goon-Based Action RPG • Edge responsibly • 🔞 
+            <br>
+            🌊 Trapped in eternal summer of stimulation
+        </div>
+        <div class="profile-metadata">
+            <div class="metadata-item">
+                <span>📍</span>
+                <span>The Loopscape</span>
+            </div>
+            <div class="metadata-item">
+                <span>🗓️</span>
+                <span>Joined May 2023</span>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat"><strong>420</strong> Following</div>
+            <div class="stat"><strong>69.4K</strong> Followers</div>
+        </div>
+    </div>
+    
+    <div class="nav-tabs">
+        <div class="nav-tab active">Posts</div>
+        <div class="nav-tab">Replies</div>
+        <div class="nav-tab">Highlights</div>
+        <div class="nav-tab">Media</div>
+        <div class="nav-tab">Likes</div>
+    </div>
+    
+    <div class="timeline">
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🌀</div>
+                <div class="tweet-meta">
+                    <span class="tweet-name">Summer</span>
+                    <span class="tweet-handle">@SummerLoopGame</span>
+                    <span>·</span>
+                    <span class="tweet-time">2h</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                New location drop! The Drip Caverns are now live 💧<br><br>
+                
+                This place is UNREAL. Moisture levels are through the roof and the echo effects on your edge techniques are *chef's kiss* 🤌<br><br>
+                
+                Perfect for those 8+ hour sessions. Your socks will thank you later 🧦
+                <br><br>
+                <a href="#" class="trending-tag">#SummerUpdate</a> <a href="#" class="trending-tag">#DripCaverns</a>
+            </div>
+            <div class="tweet-media">
+                <img src="assets/pics/Drip Caverns.jpg" alt="Drip Caverns screenshot">
+            </div>
+            <div class="tweet-actions">
+                <div class="action">💬 142</div>
+                <div class="action retweet">🔄 1.2K</div>
+                <div class="action like">❤️ 6.9K</div>
+                <div class="action">📤 89</div>
+            </div>
+        </div>
+        
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🌀</div>
+                <div class="tweet-meta">
+                    <span class="tweet-name">Summer</span>
+                    <span class="tweet-handle">@SummerLoopGame</span>
+                    <span>·</span>
+                    <span class="tweet-time">4h</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                Weekly <a href="#" class="trending-tag">#NoFinishFriday</a> challenge starts in 30 mins! 🚀<br><br>
+                
+                Rules:<br>
+                🚫 No climax cascades<br>
+                ⏰ 8-hour endurance minimum<br>
+                🧦 Premium socks recommended<br>
+                🏆 Leaderboard placement = eternal glory<br><br>
+                
+                who's ready to transcend? 👀
+            </div>
+            <div class="tweet-actions">
+                <div class="action">💬 420</div>
+                <div class="action retweet">🔄 3.3K</div>
+                <div class="action like">❤️ 12K</div>
+                <div class="action">📤 234</div>
+            </div>
+        </div>
+        
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🌀</div>
+                <div class="tweet-meta">
+                    <span class="tweet-name">Summer</span>
+                    <span class="tweet-handle">@SummerLoopGame</span>
+                    <span>·</span>
+                    <span class="tweet-time">8h</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                The Orb Chamber is calling... 👁️✨<br><br>
+                
+                This is where legends are made. Where seekers become gazers. Where the impossible becomes inevitable.<br><br>
+                
+                Enter if you dare. Leave if you can. Transcend if you're worthy.
+            </div>
+            <div class="tweet-media">
+                <img src="assets/pics/Orb Chamber.png" alt="Orb Chamber screenshot">
+            </div>
+            <div class="tweet-actions">
+                <div class="action">💬 666</div>
+                <div class="action retweet">🔄 2.1K</div>
+                <div class="action like">❤️ 8.4K</div>
+                <div class="action">📤 167</div>
+            </div>
+        </div>
+        
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🌀</div>
+                <div class="tweet-meta">
+                    <span class="tweet-name">Summer</span>
+                    <span class="tweet-handle">@SummerLoopGame</span>
+                    <span>·</span>
+                    <span class="tweet-time">12h</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                DEVELOPER UPDATE 🔥<br><br>
+                We've been monitoring the global Goon Caves and... wow. You degenerates are exceeding our wildest expectations.<br><br>
+                Current stats:<br>
+                📈 Average session length: 4.20 hours<br>
+                🧦 Socks destroyed: 420,690<br>
+                💦 Shame fragments collected: 69 million<br>
+                ∞ Perfect loops achieved: 1,337<br><br>
+                
+                Keep pushing those limits, Seekers. The Loop is proud. 🙏
+            </div>
+            <div class="tweet-actions">
+                <div class="action">💬 1.9K</div>
+                <div class="action retweet">🔄 12K</div>
+                <div class="action like">❤️ 42K</div>
+                <div class="action">📤 2.3K</div>
+            </div>
+        </div>
+        
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🌀</div>
+                <div class="tweet-meta">
+                    <span class="tweet-name">Summer</span>
+                    <span class="tweet-handle">@SummerLoopGame</span>
+                    <span>·</span>
+                    <span class="tweet-time">1d</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                Edgewater Beach at sunset hits different 🌅<br><br>
+                
+                Perfect spot for those contemplative edge sessions. The waves provide natural rhythm coaching and the view? *Transcendent*<br><br>
+                
+                Pro tip: Best experienced during golden hour for maximum mindfulness gains
+            </div>
+            <div class="tweet-media">
+                <img src="assets/pics/Edgewater beach.jpg" alt="Edgewater Beach sunset">
+            </div>
+            <div class="tweet-actions">
+                <div class="action">💬 888</div>
+                <div class="action retweet">🔄 3.7K</div>
+                <div class="action like">❤️ 15K</div>
+                <div class="action">📤 567</div>
+            </div>
+        </div>
+        
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🌀</div>
+                <div class="tweet-meta">
+                    <span class="tweet-name">Summer</span>
+                    <span class="tweet-handle">@SummerLoopGame</span>
+                    <span>·</span>
+                    <span class="tweet-time">2d</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                Season 1 Battle Pass rewards are looking CRISPY 🔥<br><br>
+                
+                That premium sock collection though... your feet will never be the same. Zero chance of mid-session textile failure with these bad boys 🧦✨<br><br>
+                
+                <a href="#" class="trending-tag">#BattlePass</a> <a href="#" class="trending-tag">#PremiumSocks</a>
+            </div>
+            <div class="tweet-media">
+                <img src="assets/pics/battlepass/tier-sock.png" alt="Premium sock collection">
+            </div>
+            <div class="tweet-actions">
+                <div class="action">💬 1.3K</div>
+                <div class="action retweet">🔄 8.9K</div>
+                <div class="action like">❤️ 25K</div>
+                <div class="action">📤 890</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

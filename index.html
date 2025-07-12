@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer: The Loop Never Ends</title>
+    <link rel="icon" type="image/png" href="assets/pics/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/pics/favicon.png" alt="Summer Logo" style="width: 32px; height: 32px;">
+                <span>SUMMER</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#about">Game</a>
+                <a href="#features">Features</a>
+                <a href="#battlepass">Battle Pass</a>
+                <a href="#trailer">Trailer</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#soundtrack">Soundtrack</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-main">SUMMER</span>
+                <span class="title-sub">The Loop Never Ends</span>
+            </h1>
+            <p class="hero-subtitle">Endure the Blisswave. Ascend the Edge.</p>
+            <div class="hero-buttons">
+                <a href="https://store.steampowered.com" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-steam"></i>
+                    Wishlist Now
+                </a>
+                <button class="btn btn-secondary" id="syncBtn">
+                    <i class="fas fa-sync"></i>
+                    Join The Sync
+                </button>
+            </div>
+        </div>
+        <div class="hero-particles"></div>
+    </section>
+
+    <!-- Game Description -->
+    <section id="about" class="game-description">
+        <div class="container">
+            <h2 class="section-title">An Immersive Goon-Based Action RPG</h2>
+            <div class="description-content">
+                <p class="main-description">
+                    Trapped in the eternal summer of stimulation, you are a Seeker—a vessel of willpower tasked with resisting temptation, edging past limits, and syncing with the Orb. Navigate through the surreal Loopscape where focus drain threatens your progress and every climax cascade resets your journey. Will you finish… or will you transcend?
+                </p>
+                <div class="feature-tags">
+                    <span class="tag">Focus Drain Mechanics</span>
+                    <span class="tag">Climax Cascade System</span>
+                    <span class="tag">Loopscape Exploration</span>
+                    <span class="tag">Transcendence Paths</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlights -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Edge Meter Management</h3>
+                    <p>Balance arousal and awareness in a delicate dance of self-control. Push too hard and risk everything; hold back and miss transcendence.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Shame Fragments</h3>
+                    <p>Die, release, repeat, and upgrade. Each failure leaves behind crystallized shame that powers your next attempt at glory.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Co-op GoonSync Mode</h3>
+                    <p>Edge with up to 3 players in rhythmic harmony. Synchronize your breathing, match your tempo, and achieve collective enlightenment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Orb Trials</h3>
+                    <p>Weekly "no-release" challenge runs with global leaderboards. Prove your endurance and claim your place among the enlightened.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-socks"></i>
+                    </div>
+                    <h3>Sock Durability System</h3>
+                    <p>Optional, cosmetic, embarrassing. Track the wear and tear of your journey through detailed fabric degradation physics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Infinite Loop Mechanics</h3>
+                    <p>Master the art of perpetual motion. Each loop teaches patience; each edge brings wisdom; each denial builds character.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trailer Section -->
+    <section id="trailer" class="trailer">
+        <div class="container">
+            <h2 class="section-title">Experience The Loop</h2>
+            <div class="trailer-content">
+                <div class="video-container">
+                    <video src="assets/vids/Trailer.mp4" controls poster="assets/pics/Edgewater beach.jpg" style="width:100%;height:100%;object-fit:cover;border:none;border-radius:0;"></video>
+                </div>
+                <p class="trailer-caption">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Viewer discretion advised. May induce rhythmic focus drift.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Explore The Loopscape</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/pics/Drip Caverns.jpg" alt="The Drip Caverns">
+                    <div class="gallery-overlay">
+                        <h3>The Drip Caverns</h3>
+                        <p>Moist and full of secrets</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/pics/Orb Chamber.png" alt="The Orb Chamber">
+                    <div class="gallery-overlay">
+                        <h3>The Orb Chamber</h3>
+                        <p>The Orb gazes back</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/pics/Edgewater beach.jpg" alt="Edgewater Beach">
+                    <div class="gallery-overlay">
+                        <h3>Edgewater Beach</h3>
+                        <p>Where every wave is a tease</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/pics/The Sync Sanctum.png" alt="The Sync Sanctum">
+                    <div class="gallery-overlay">
+                        <h3>The Sync Sanctum</h3>
+                        <p>Where minds meld and boundaries blur</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/pics/Loop Gardens.jpg" alt="Loop Gardens">
+                    <div class="gallery-overlay">
+                        <h3>Loop Gardens</h3>
+                        <p>Eternal growth in endless cycles</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/pics/The Edge Nexus.jpg" alt="The Edge Nexus">
+                    <div class="gallery-overlay">
+                        <h3>The Edge Nexus</h3>
+                        <p>Balance on the precipice of everything</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Battle Pass Section -->
+    <section id="battlepass" class="battlepass">
+        <div class="container">
+            <div class="battlepass-banner">
+                <h2 class="section-title">Season 1 Battle Pass: BLISSWAVE ASCENT</h2>
+                <p class="battlepass-subtitle">Edge, earn, transcend — 75 days left before the Reset.</p>
+                <div class="battlepass-cta">
+                    <button class="btn btn-primary battlepass-purchase">
+                        <i class="fas fa-star"></i>
+                        Unlock Premium — $9.99
+                    </button>
+                    <button class="btn btn-secondary battlepass-learn">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <div class="battlepass-content">
+                <div class="battlepass-left">
+                    <div class="battlepass-card">
+                        <img src="assets/pics/battlepass/battlepass-card.png" alt="Blisswave Ascent Battle Pass">
+                        <div class="card-overlay">
+                            <h3>BLISSWAVE ASCENT</h3>
+                            <p>Season 1 Premium Pass</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="battlepass-right">
+                    <div class="progress-section">
+                        <div class="level-badge">
+                            <span class="level-number">07</span>
+                            <span class="level-text">/ 50</span>
+                        </div>
+                        <div class="xp-progress">
+                            <div class="xp-bar">
+                                <div class="xp-fill" data-progress="65"></div>
+                            </div>
+                            <div class="xp-text">
+                                <span>2,340 / 3,600 XP</span>
+                                <span>65%</span>
+                            </div>
+                        </div>
+                        <div class="daily-reset">
+                            <i class="fas fa-clock"></i>
+                            <span>Daily Blissquests Reset in <span id="countdown">04:21:37</span></span>
+                        </div>
+                    </div>
+
+                    <div class="features-list">
+                        <h4>Premium Features</h4>
+                        <ul>
+                            <li><i class="fas fa-palette"></i> 50 Cosmetic Shimmer-Skins</li>
+                            <li><i class="fas fa-shield-alt"></i> Sock Durability Boosters</li>
+                            <li><i class="fas fa-magic"></i> Loopscape Emotes & Focus Trails</li>
+                            <li><i class="fas fa-crown"></i> Exclusive 'Orbsong' Finisher Animation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tier-section">
+                <h3 class="tier-title">Battle Pass Tiers</h3>
+                <p class="tier-subtitle">Preview the exclusive rewards waiting in Blisswave Ascent</p>
+                
+                <div class="reward-collection">
+                    <!-- Goon Arsenal -->
+                    <div class="reward-card">
+                        <div class="reward-header">
+                            <h4>🗡️ Goon Arsenal</h4>
+                            <p>Weapons, shame boosts, and tactical emotes for the dedicated</p>
+                        </div>
+                        <div class="reward-previews">
+                            <div class="preview-item wide">
+                                <img src="assets/pics/battlepass/tier-weapon.png" alt="Neon Weapons">
+                                <span class="preview-label">Neon Edge Collection</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-xp.png" alt="Shame Boost">
+                                <span class="preview-label">Shame Boost</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-emote.png" alt="Combat Emotes">
+                                <span class="preview-label">Combat Emotes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sock Vault -->
+                    <div class="reward-card">
+                        <div class="reward-header">
+                            <h4>🧦 Sock Vault</h4>
+                            <p>Cosmetic footwear with minor buffs and durability upgrades</p>
+                        </div>
+                        <div class="reward-previews">
+                            <div class="preview-item wide">
+                                <img src="assets/pics/battlepass/tier-sock.png" alt="Premium Socks">
+                                <span class="preview-label">Premium Sock Collection</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-xp.png" alt="Durability">
+                                <span class="preview-label">+200% Durability</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-finisher.png" alt="Sock Effects">
+                                <span class="preview-label">Visual Effects</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ∞ Loop Pack -->
+                    <div class="reward-card">
+                        <div class="reward-header">
+                            <h4>∞ Loop Pack</h4>
+                            <p>Fragment bundles and stamina resets for endless sessions</p>
+                        </div>
+                        <div class="reward-previews">
+                            <div class="preview-item wide">
+                                <img src="assets/pics/battlepass/tier-emote.png" alt="Loop Fragments">
+                                <span class="preview-label">Infinity Loop System</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-finisher.png" alt="Fragments">
+                                <span class="preview-label">Shame Fragments</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-xp.png" alt="Stamina">
+                                <span class="preview-label">Stamina Reset</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edgewave Drop -->
+                    <div class="reward-card">
+                        <div class="reward-header">
+                            <h4>🌊 Edgewave Drop</h4>
+                            <p>Neon trails, orb skins, and atmospheric aura effects</p>
+                        </div>
+                        <div class="reward-previews">
+                            <div class="preview-item wide">
+                                <img src="assets/pics/battlepass/tier-orb.png" alt="Orb Skins">
+                                <span class="preview-label">Orb Skin Collection</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-emote.png" alt="Neon Trails">
+                                <span class="preview-label">Neon Trails</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-finisher.png" alt="Aura FX">
+                                <span class="preview-label">Aura Effects</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chrome Unlocks -->
+                    <div class="reward-card">
+                        <div class="reward-header">
+                            <h4>✨ Chrome Unlocks</h4>
+                            <p>Epic gear with reflective surfaces and shiny visual effects</p>
+                        </div>
+                        <div class="reward-previews">
+                            <div class="preview-item wide">
+                                <img src="assets/pics/battlepass/tier-skin.png" alt="Chrome Gear">
+                                <span class="preview-label">Chrome Gear Set</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-weapon.png" alt="Chrome Weapons">
+                                <span class="preview-label">Chrome Weapons</span>
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/pics/battlepass/tier-finisher.png" alt="Finishers">
+                                <span class="preview-label">Epic Finishers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soundtrack Preview -->
+    <section id="soundtrack" class="soundtrack">
+        <div class="container">
+            <h2 class="section-title">Atmospheric Soundscape</h2>
+            <div class="soundtrack-content">
+                <div class="audio-player">
+                    <div class="player-header">
+                        <i class="fas fa-headphones"></i>
+                        <span class="now-playing">Now Playing: Loopstate Lullaby</span>
+                    </div>
+                    <div class="player-controls">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="time">0:00 / 0:00</span>
+                    </div>
+                </div>
+                <div class="track-list">
+                    <div class="track active" data-src="assets/audios/LOOPSTATE LULLABY PREVIEW.mp3">
+                        <span class="track-number">01</span>
+                        <span class="track-name">Loopstate Lullaby</span>
+                        <span class="track-duration">Preview</span>
+                    </div>
+                    <div class="track" data-src="assets/audios/EDGE ENGINE WARMUP PREVIEW.mp3">
+                        <span class="track-number">02</span>
+                        <span class="track-name">Edge Engine Warmup</span>
+                        <span class="track-duration">Preview</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hidden audio elements -->
+        <audio id="audioPlayer" preload="metadata">
+            <source src="assets/audios/LOOPSTATE LULLABY PREVIEW.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">FAQ</h2>
+            <div class="faq-content">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is this a real game?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. And no. But mostly yes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need to finish?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Only if you're weak.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I play alone?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend Solo Descent Mode for true mindlock immersion.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Will this ruin my life?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. But you'll thank us.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What platforms will it be available on?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>PC, consciousness, and the ethereal plane. Console ports pending transcendence approval.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/pics/favicon.png" alt="Summer Logo" style="width: 32px; height: 32px;">
+                    <span>SUMMER</span>
+                </div>
+                <div class="social-links">
+                    <a href="twitter.html" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="discord.html" class="social-link">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="youtube.html" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="twitch.html" class="social-link">
+                        <i class="fab fa-twitch"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Orb Collective. All Rights Withheld. Unauthorized release is punishable by loop reset.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loop Sync Popup -->
+    <div id="syncPopup" class="popup-overlay">
+        <div class="popup">
+            <div class="popup-header">
+                <h3>Join The Sync</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="popup-content">
+                <div class="sync-animation">
+                    <div class="orb"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                </div>
+                <p>Synchronizing with the Orb...</p>
+                <div class="sync-progress">
+                    <div class="progress-fill"></div>
+                </div>
+                <p class="sync-status">Establishing neural link...</p>
+                <button class="btn btn-primary sync-complete-btn" style="display: none;">Enter The Loop</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
